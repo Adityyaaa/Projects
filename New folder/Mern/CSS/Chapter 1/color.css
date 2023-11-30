@@ -1,0 +1,14 @@
+*{
+    margin: 4px;
+    padding: 4px;
+}
+
+.red{
+background-color: red;
+color: aliceblue;
+}
+
+.green{
+background-color: green;
+color: aqua;
+}

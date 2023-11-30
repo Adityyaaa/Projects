@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab Switching Alert</title>
+</head>
+<body>
+    <p>Switch to another tab and come back to see the alert.</p>
+
+    <script>
+        // Check for browser support of the Page Visibility API
+        if (typeof document.hidden !== "undefined") {
+            // Add an event listener to detect when the tab becomes visible again
+            document.addEventListener("visibilitychange", function() {
+                if (document.hidden) {
+                    // Tab is not visible, display an alert or take some action
+                    alert("Warning: You switched tabs!");
+                } else {
+                    // Tab is visible again
+                    // You can perform additional actions here if needed
+                }
+            });
+        } else {
+            console.log("Page Visibility API not supported in this browser.");
+        }
+    </script>
+</body>
+</html>

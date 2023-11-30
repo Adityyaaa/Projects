@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .con{
+            background-color: purple;
+            height: 5000px;
+        }
+        .box{
+            border: 5px solid black;
+            display: inline-block;
+            transform: translate(40px) rotateY(45deg);
+            color: aliceblue;
+        }
+        img:hover{
+            width: 600px;
+        }
+        img{
+            width: 200px;
+            transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+        }
+        button{
+            color: green;
+            background-color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box">
+            <img id="myImage" src="flames.jpg" alt="">
+            <br>
+            <button id="btn">Toggle</button>
+            <br>
+            <br>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nam!
+        </div>
+    </div>
+</body>
+<script>
+    myImage.style.width= "200px";
+
+    btn.addEventListener("click", ()=>{
+        if(myImage.style.width==='600px'){
+            myImage.style.width= "200px";
+        }
+        else if(myImage.style.width==='200px'){
+            myImage.style.width= "600px";
+        }
+    })
+</script>
+</html>
